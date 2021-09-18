@@ -1,6 +1,4 @@
-# Start K8s
-
-请见 [GitBook](https://ikuokuo.github.io/start-k8s/) ✨
+# Summary
 
 - K8s
   - [了解 K8s](docs/k8s/overview.md)
