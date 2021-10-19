@@ -1,0 +1,665 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>部署 K8s 应用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="app_image.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    K8s
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    了解 K8s
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    搭建 K8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="install_k3d.html">
+            
+                <a href="install_k3d.html">
+            
+                    
+                    k3d
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="install_microk8s.html">
+            
+                <a href="install_microk8s.html">
+            
+                    
+                    MicroK8s
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="app_image.html">
+            
+                <a href="app_image.html">
+            
+                    
+                    准备 K8s 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="app_deploy.html">
+            
+                <a href="app_deploy.html">
+            
+                    
+                    部署 K8s 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Helm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../helm/install.html">
+            
+                <a href="../helm/install.html">
+            
+                    
+                    安装 Helm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../helm/create.html">
+            
+                <a href="../helm/create.html">
+            
+                    
+                    创建 Chart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../helm/deploy.html">
+            
+                <a href="../helm/deploy.html">
+            
+                    
+                    发布 Chart
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../final.html">
+            
+                <a href="../final.html">
+            
+                    
+                    最后
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../appendix/helm_hooks.html">
+            
+                <a href="../appendix/helm_hooks.html">
+            
+                    
+                    实践 Helm Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >部署 K8s 应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x90E8;&#x7F72;-k8s-&#x5E94;&#x7528;">&#x90E8;&#x7F72; K8s &#x5E94;&#x7528;</h1>
+<h2 id="&#x4E86;&#x89E3;&#x6982;&#x5FF5;">&#x4E86;&#x89E3;&#x6982;&#x5FF5;</h2>
+<ul>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/" target="_blank">Kubernetes / Workloads</a></li>
+</ul>
+<p>&#x4E4B;&#x540E;&#xFF0C;&#x53C2;&#x7167;&#x5B98;&#x65B9;&#x6559;&#x7A0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528; Deployment &#x8FD0;&#x884C; Go &#x5E94;&#x7528;&#xFF08;&#x65E0;&#x72B6;&#x6001;&#xFF09;&#x3002;</p>
+<h2 id="&#x5BFC;&#x5165;&#x955C;&#x50CF;">&#x5BFC;&#x5165;&#x955C;&#x50CF;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x624B;&#x52A8;&#x5BFC;&#x5165;&#x955C;&#x50CF;&#x8FDB;&#x96C6;&#x7FA4;&#xFF1A;</p>
+<pre><code class="lang-bash">docker save http_server:1.0 &gt; http_server:1.0.tar
+k3d image import http_server:1.0.tar -c mycluster
+</code></pre>
+<p>&#x5982;&#x679C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#xFF0C;&#x53C2;&#x89C1; <a href="https://k3d.io/usage/guides/registries/" target="_blank">k3d / Registries</a> &#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;-deployment">&#x521B;&#x5EFA; Deployment</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x914D;&#x7F6E; Deployment &#xFF08;2&#x4E2A;&#x526F;&#x672C;&#xFF09;</span>
+cat &lt;&lt;EOF &gt; go-http-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-http
+  labels:
+    app: go-http
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-http
+  template:
+    metadata:
+      labels:
+        app: go-http
+    spec:
+      containers:
+      - name: go-http
+        image: http_server:1.0
+        ports:
+        - containerPort: 3000
+EOF
+<span class="hljs-comment"># &#x5E94;&#x7528; Deployment</span>
+<span class="hljs-comment">#  --record: &#x8BB0;&#x5F55;&#x547D;&#x4EE4;</span>
+kubectl apply <span class="hljs-_">-f</span> go-http-deployment.yaml --record
+</code></pre>
+<p>&#x67E5;&#x770B; Deployment&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B; Deployment</span>
+&#x276F; kubectl get deploy
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+nginx     1/1     1            1           2d
+go-http   2/2     2            2           22s
+
+<span class="hljs-comment"># &#x67E5;&#x770B; Deployment &#x4FE1;&#x606F;</span>
+kubectl describe deploy go-http
+<span class="hljs-comment"># &#x67E5;&#x770B; Deployment &#x521B;&#x5EFA;&#x7684; ReplicaSet &#xFF08;2&#x4E2A;&#xFF09;</span>
+kubectl get rs
+<span class="hljs-comment"># &#x67E5;&#x770B; Deployment &#x521B;&#x5EFA;&#x7684; Pods &#xFF08;2&#x4E2A;&#xFF09;</span>
+kubectl get po <span class="hljs-_">-l</span> app=go-http -o wide --show-labels
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x67D0;&#x4E00; Pod &#x4FE1;&#x606F;</span>
+kubectl describe po go-http-5848d49c7c-wzmxh
+</code></pre>
+<ul>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/" target="_blank">k8s / Deployments</a></li>
+</ul>
+<h2 id="&#x521B;&#x5EFA;-service">&#x521B;&#x5EFA; Service</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA; Service&#xFF0C;&#x540D;&#x4E3A; go-http</span>
+<span class="hljs-comment">#  &#x5C06;&#x8BF7;&#x6C42;&#x4EE3;&#x7406;&#x5230; app=go-http, tcp=3000 &#x7684; Pod &#x4E0A;</span>
+kubectl expose deployment go-http --name=go-http
+<span class="hljs-comment"># &#x6216;</span>
+cat &lt;&lt;EOF | kubectl create <span class="hljs-_">-f</span> -
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-http
+  labels:
+    app: go-http
+spec:
+  selector:
+    app: go-http
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+EOF
+
+<span class="hljs-comment"># &#x67E5;&#x770B; Service</span>
+kubectl get svc
+<span class="hljs-comment"># &#x67E5;&#x770B; Service &#x4FE1;&#x606F;</span>
+kubectl describe svc go-http
+<span class="hljs-comment"># &#x67E5;&#x770B; Endpoints &#x5BF9;&#x6BD4;&#x770B;&#x770B;</span>
+<span class="hljs-comment">#  kubectl get ep go-http</span>
+<span class="hljs-comment">#  kubectl get po -l app=go-http -o wide</span>
+
+<span class="hljs-comment"># &#x5220;&#x9664; Service &#xFF08;&#x5982;&#x679C;&#xFF09;</span>
+kubectl delete svc go-http
+</code></pre>
+<!--
+# 或，但 Service 信息里 Port 稍不一样
+kubectl create service clusterip go-http --tcp=3000:3000
+-->
+<p>&#x8BBF;&#x95EE; Service (DNS)&#xFF1A;</p>
+<pre><code class="lang-bash">&#x276F; kubectl run curl --image=radial/busyboxplus:curl -i --tty
+
+If you don<span class="hljs-string">&apos;t see a command prompt, try pressing enter.
+
+[ root@curl:/ ]$ nslookup go-http
+Server:    10.43.0.10
+Address 1: 10.43.0.10 kube-dns.kube-system.svc.cluster.local
+
+Name:      go-http
+Address 1: 10.43.102.17 go-http.default.svc.cluster.local
+
+[ root@curl:/ ]$ curl http://go-http:3000/go
+Hi there, I love go!
+</span></code></pre>
+<p>&#x66B4;&#x9732; Service (Ingress)&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA; Ingress Object</span>
+cat &lt;&lt;EOF | kubectl apply <span class="hljs-_">-f</span> -
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-http
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: <span class="hljs-string">&quot;false&quot;</span>
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /go
+        pathType: Prefix
+        backend:
+          service:
+            name: go-http
+            port:
+              number: 3000
+EOF
+<span class="hljs-comment"># &#x67E5;&#x770B; Ingress</span>
+kubectl get ingress
+<span class="hljs-comment"># &#x67E5;&#x770B; Ingress &#x4FE1;&#x606F;</span>
+kubectl describe ingress go-http
+
+<span class="hljs-comment"># &#x5220;&#x9664; Ingress &#xFF08;&#x5982;&#x679C;&#xFF09;</span>
+kubectl delete ingress go-http
+</code></pre>
+<p>&#x8BBF;&#x95EE; Service (Ingress)&#xFF1A;</p>
+<pre><code class="lang-bash">&#x276F; open http://127.0.0.1:8080/go
+<span class="hljs-comment"># &#x6216;&#xFF0C;</span>
+&#x276F; curl http://127.0.0.1:8080/go
+Hi there, I love go!
+<span class="hljs-comment"># Nginx &#x662F;&#x5728; http://127.0.0.1:8080</span>
+</code></pre>
+<ul>
+<li><a href="https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/" target="_blank">k8s / Connecting Applications with Services</a></li>
+<li><a href="https://kubernetes.io/docs/tutorials/stateless-application/expose-external-ip-address/" target="_blank">k8s / Exposing an External IP Address</a></li>
+</ul>
+<!--
+kubectl expose deployment go-http --type=NodePort --name=go-http --target-port=3000
+-->
+<h2 id="&#x66F4;&#x65B0;">&#x66F4;&#x65B0;</h2>
+<p>&#x4EC5;&#x5F53; Deployment Pod &#x6A21;&#x677F;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x4F8B;&#x5982;&#x6A21;&#x677F;&#x7684;&#x6807;&#x7B7E;&#x6216;&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x88AB;&#x66F4;&#x65B0;&#xFF0C;&#x624D;&#x4F1A;&#x89E6;&#x53D1; Deployment &#x4E0A;&#x7EBF;&#x3002;&#x5176;&#x4ED6;&#x66F4;&#x65B0;&#xFF08;&#x5982;&#x5BF9; Deployment &#x6267;&#x884C;&#x6269;&#x7F29;&#x5BB9;&#x7684;&#x64CD;&#x4F5C;&#xFF09;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x4E0A;&#x7EBF;&#x52A8;&#x4F5C;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x51C6;&#x5907; <code>http_server:2.0</code> &#x955C;&#x50CF;&#x5BFC;&#x5165;&#x96C6;&#x7FA4;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#xFF1A;</p>
+<pre><code class="lang-bash">&#x276F; kubectl <span class="hljs-built_in">set</span> image deployment/go-http go-http=http_server:2.0 --record
+deployment.apps/go-http image updated
+</code></pre>
+<p>&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4E0A;&#x7EBF;&#x72B6;&#x6001;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;&#x4E0A;&#x7EBF;&#x72B6;&#x6001;</span>
+&#x276F; kubectl rollout status deployment/go-http
+deployment <span class="hljs-string">&quot;go-http&quot;</span> successfully rolled out
+
+<span class="hljs-comment"># &#x67E5;&#x770B; ReplicaSet &#x72B6;&#x6001;&#xFF1A;&#x65B0;&#x7684;&#x6269;&#x5BB9;&#xFF0C;&#x65E7;&#x7684;&#x7F29;&#x5BB9;&#xFF0C;&#x5B8C;&#x6210;&#x66F4;&#x65B0;</span>
+&#x276F; kubectl get rs
+NAME                 DESIRED   CURRENT   READY   AGE
+go-http-586694b4f6   2         2         2       10s
+go-http-5848d49c7c   0         0         0       6d
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x670D;&#x52A1;&#xFF1A;</p>
+<pre><code class="lang-bash">&#x276F; curl http://127.0.0.1:8080/go
+Hi there v2, I love go!
+</code></pre>
+<h2 id="&#x56DE;&#x6EDA;">&#x56DE;&#x6EDA;</h2>
+<p>&#x67E5;&#x770B; Deployment &#x4FEE;&#x8BA2;&#x5386;&#x53F2;&#xFF1A;</p>
+<pre><code class="lang-bash">&#x276F; kubectl rollout <span class="hljs-built_in">history</span> deployment.v1.apps/go-http
+deployment.apps/go-http
+REVISION  CHANGE-CAUSE
+1         kubectl apply --filename=go-http-deployment.yaml --record=<span class="hljs-literal">true</span>
+2         kubectl <span class="hljs-built_in">set</span> image deployment/go-http go-http=http_server:2.0 --record=<span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x4FEE;&#x8BA2;&#x4FE1;&#x606F;</span>
+kubectl rollout <span class="hljs-built_in">history</span> deployment.v1.apps/go-http --revision=2
+</code></pre>
+<p>&#x56DE;&#x6EDA;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x56DE;&#x6EDA;&#x5230;&#x4E0A;&#x4E00;&#x7248;</span>
+kubectl rollout undo deployment.v1.apps/go-http
+<span class="hljs-comment"># &#x56DE;&#x6EDA;&#x5230;&#x6307;&#x5B9A;&#x7248;&#x672C;</span>
+kubectl rollout undo deployment.v1.apps/go-http --to-revision=1
+</code></pre>
+<h2 id="&#x7F29;&#x653E;">&#x7F29;&#x653E;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7F29;&#x653E; Deployment &#x7684; ReplicaSet &#x6570;</span>
+kubectl scale deployment.v1.apps/go-http --replicas=10
+
+<span class="hljs-comment"># &#x5982;&#x679C;&#x96C6;&#x7FA4;&#x542F;&#x7528;&#x4E86; Pod &#x7684;&#x6C34;&#x5E73;&#x81EA;&#x52A8;&#x7F29;&#x653E;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x73B0;&#x6709; Pods &#x7684; CPU &#x5229;&#x7528;&#x7387;&#x9009;&#x62E9;&#x4E0A;&#x4E0B;&#x9650;</span>
+<span class="hljs-comment"># Horizontal Pod Autoscaler Walkthrough</span>
+<span class="hljs-comment">#  https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/</span>
+kubectl autoscale deployment.v1.apps/nginx-deployment --min=10 --max=15 --cpu-percent=80
+</code></pre>
+<h2 id="&#x6682;&#x505C;&#x3001;&#x6062;&#x590D;">&#x6682;&#x505C;&#x3001;&#x6062;&#x590D;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6682;&#x505C; Deployment</span>
+kubectl rollout pause deployment.v1.apps/go-http
+<span class="hljs-comment"># &#x6062;&#x590D; Deployment</span>
+kubectl rollout resume deployment.v1.apps/go-http
+</code></pre>
+<p>&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x66F4;&#x65B0; Deployment &#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x4E0A;&#x7EBF;&#x3002;</p>
+<h2 id="&#x5220;&#x9664;">&#x5220;&#x9664;</h2>
+<pre><code class="lang-bash">kubectl delete deployment go-http
+</code></pre>
+<h2 id="&#x91D1;&#x4E1D;&#x96C0;&#x90E8;&#x7F72;">&#x91D1;&#x4E1D;&#x96C0;&#x90E8;&#x7F72;</h2>
+<p>&#x7070;&#x5EA6;&#x90E8;&#x7F72;&#xFF0C;&#x7528;&#x591A;&#x6807;&#x7B7E;&#x533A;&#x5206;&#x591A;&#x4E2A;&#x90E8;&#x7F72;&#xFF0C;&#x65B0;&#x65E7;&#x7248;&#x53EF;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x3002;&#x90E8;&#x7F72;&#x65B0;&#x7248;&#x65F6;&#xFF0C;&#x7528;&#x5C11;&#x91CF;&#x6D41;&#x91CF;&#x9A8C;&#x8BC1;&#xFF0C;&#x6CA1;&#x95EE;&#x9898;&#x518D;&#x5168;&#x91CF;&#x66F4;&#x65B0;&#x3002;</p>
+<ul>
+<li><a href="https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#canary-deployments" target="_blank">k8s / Canary Deployments</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="app_image.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 准备 K8s 应用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"部署 K8s 应用","level":"1.2.4","depth":2,"next":{"title":"Helm","level":"1.3","depth":1,"ref":"","articles":[{"title":"安装 Helm","level":"1.3.1","depth":2,"path":"docs/helm/install.md","ref":"docs/helm/install.md","articles":[]},{"title":"创建 Chart","level":"1.3.2","depth":2,"path":"docs/helm/create.md","ref":"docs/helm/create.md","articles":[]},{"title":"发布 Chart","level":"1.3.3","depth":2,"path":"docs/helm/deploy.md","ref":"docs/helm/deploy.md","articles":[]}]},"previous":{"title":"准备 K8s 应用","level":"1.2.3","depth":2,"path":"docs/k8s/app_image.md","ref":"docs/k8s/app_image.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["intopic-toc","livereload"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/k8s/app_deploy.md","mtime":"2021-10-19T11:38:54.998Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T11:39:43.975Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

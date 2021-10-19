@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>准备 K8s 应用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="app_deploy.html" />
+    
+    
+    <link rel="prev" href="install_microk8s.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    K8s
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    了解 K8s
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    搭建 K8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="install_k3d.html">
+            
+                <a href="install_k3d.html">
+            
+                    
+                    k3d
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="install_microk8s.html">
+            
+                <a href="install_microk8s.html">
+            
+                    
+                    MicroK8s
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="app_image.html">
+            
+                <a href="app_image.html">
+            
+                    
+                    准备 K8s 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="app_deploy.html">
+            
+                <a href="app_deploy.html">
+            
+                    
+                    部署 K8s 应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Helm
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../helm/install.html">
+            
+                <a href="../helm/install.html">
+            
+                    
+                    安装 Helm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../helm/create.html">
+            
+                <a href="../helm/create.html">
+            
+                    
+                    创建 Chart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../helm/deploy.html">
+            
+                <a href="../helm/deploy.html">
+            
+                    
+                    发布 Chart
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../final.html">
+            
+                <a href="../final.html">
+            
+                    
+                    最后
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../appendix/helm_hooks.html">
+            
+                <a href="../appendix/helm_hooks.html">
+            
+                    
+                    实践 Helm Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >准备 K8s 应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x51C6;&#x5907;-k8s-&#x5E94;&#x7528;">&#x51C6;&#x5907; K8s &#x5E94;&#x7528;</h1>
+<h2 id="go-&#x5E94;&#x7528;">Go &#x5E94;&#x7528;</h2>
+<p><code>http_server.go</code>:</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;log&quot;</span>
+    <span class="hljs-string">&quot;net/http&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, <span class="hljs-string">&quot;Hi there, I love %s!&quot;</span>, r.URL.Path[<span class="hljs-number">1</span>:])
+}
+
+<span class="hljs-keyword">func</span> main() {
+    http.HandleFunc(<span class="hljs-string">&quot;/&quot;</span>, handler)
+    fmt.Println(<span class="hljs-string">&quot;HTTP Server running ...&quot;</span>)
+    log.Fatal(http.ListenAndServe(<span class="hljs-string">&quot;:3000&quot;</span>, <span class="hljs-literal">nil</span>))
+}
+</code></pre>
+<h2 id="&#x6784;&#x5EFA;&#x955C;&#x50CF;">&#x6784;&#x5EFA;&#x955C;&#x50CF;</h2>
+<p><code>http_server.dockerfile</code>:</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> golang:<span class="hljs-number">1.17</span>-alpine AS builder
+<span class="hljs-keyword">WORKDIR</span> <span class="bash">/app
+</span><span class="hljs-keyword">ADD</span> <span class="bash">./http_server.go /app
+</span><span class="hljs-keyword">RUN</span> <span class="bash"><span class="hljs-built_in">cd</span> /app &amp;&amp; go build http_server.go
+</span>
+<span class="hljs-keyword">FROM</span> alpine:<span class="hljs-number">3.14</span>
+WORKDIR /app
+<span class="hljs-keyword">COPY</span> <span class="bash">--from=builder /app/http_server /app/
+</span><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">3000</span>
+ENTRYPOINT ./http_server
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x7F16;&#x8BD1;&#x955C;&#x50CF;</span>
+docker build -t http_server:1.0 <span class="hljs-_">-f</span> http_server.dockerfile .
+<span class="hljs-comment"># &#x8FD0;&#x884C;&#x5E94;&#x7528;</span>
+docker run --rm -p 3000:3000 http_server:1.0
+<span class="hljs-comment"># &#x6D4B;&#x8BD5;&#x5E94;&#x7528;</span>
+&#x276F; curl http://127.0.0.1:3000/go
+Hi there, I love go!
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="install_microk8s.html" class="navigation navigation-prev " aria-label="Previous page: MicroK8s">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="app_deploy.html" class="navigation navigation-next " aria-label="Next page: 部署 K8s 应用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"准备 K8s 应用","level":"1.2.3","depth":2,"next":{"title":"部署 K8s 应用","level":"1.2.4","depth":2,"path":"docs/k8s/app_deploy.md","ref":"docs/k8s/app_deploy.md","articles":[]},"previous":{"title":"MicroK8s","level":"1.2.2.2","depth":3,"path":"docs/k8s/install_microk8s.md","ref":"docs/k8s/install_microk8s.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["intopic-toc","livereload"],"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/k8s/app_image.md","mtime":"2021-10-19T11:38:54.998Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T11:39:43.975Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
