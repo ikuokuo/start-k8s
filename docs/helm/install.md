@@ -10,7 +10,3 @@ sudo snap install helm --classic
 ```
 
 执行 `helm` 了解命令。
-
-```bash
-helm create go-http
-```

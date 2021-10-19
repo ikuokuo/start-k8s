@@ -1,5 +1,9 @@
 # 创建 Chart
 
+```bash
+helm create go-http
+```
+
 查看内容：
 
 ```bash

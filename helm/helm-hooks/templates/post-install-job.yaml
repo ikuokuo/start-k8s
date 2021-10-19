@@ -1,0 +1,34 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: post-install-job
+  labels:
+  annotations:
+    helm.sh/hook: "post-install, post-upgrade"
+    # helm.sh/hook-delete-policy: "before-hook-creation, hook-succeeded"
+    helm.sh/hook-weight: "1"
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: post-install-job
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        command: [ "/bin/sh" ]
+        args: [ "/mnt/configmap/run.sh" ]
+        volumeMounts:
+          - name: configmap-volume
+            mountPath: /mnt/configmap
+            readOnly: true
+          - name: secret-volume
+            mountPath: /mnt/secret
+            readOnly: true
+      volumes:
+        - name: configmap-volume
+          configMap:
+            name: post-install-configmap
+        - name: secret-volume
+          secret:
+            secretName: post-install-secret

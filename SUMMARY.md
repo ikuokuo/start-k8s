@@ -12,3 +12,5 @@
   - [创建 Chart](docs/helm/create.md)
   - [发布 Chart](docs/helm/deploy.md)
 - [最后](docs/final.md)
+- 附录
+  - [实践 Helm Hooks](docs/appendix/helm_hooks.md)
